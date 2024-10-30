@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:57 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/29 17:50:44 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:21:30 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
+	if (!dest && !size)
+		return (ft_strlen(src));
 	i = 0;
 	j = 0;
 	while (dest[i] && i < size)

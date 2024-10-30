@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:08:22 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 15:45:04 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:19:14 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			len;
 	char			*result;
 
+	if (!s)
+	{
+		return (0);
+	}
 	i = 0;
 	len = ft_strlen(s);
 	result = malloc (len + 1);
@@ -33,11 +37,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[len] = '\0';
 	return (result);
 }
-
-// char	to_upper(unsigned int index, char c) {
-// 	if (c >= 'a' && c <= 'z')
-// 	{
-// 		return (c - 3);
-// 	}
-// 	return (c);
-// }

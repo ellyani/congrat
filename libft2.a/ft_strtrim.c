@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:08:43 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/29 20:20:57 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:19:40 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ char	*ft_strtrim(char	*s1, char	*set)
 	size_t	end;
 	char	*trimed;
 
+	if (!s1)
+	{
+		return (0);
+	}
 	start = 0;
 	end = ft_strlen(s1);
 	while (is_in_set(s1[start], set) && start < end)
