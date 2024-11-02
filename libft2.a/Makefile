@@ -4,6 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
+HEADER = libft.h
+
 CC = cc
 
 SRC = ft_atoi.c ft_itoa.c  ft_putendl_fd.c ft_strlcat.c ft_substr.c\
@@ -29,12 +31,12 @@ PURPLE = \033[0;35m
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) ${HEADER}
 	@ar rc $(NAME) $(OBJ)
 	@echo "$(GREEN)TOUT EST MAKE"
 
-bonus : $(OBJ) $(OBJ_BONUS)
-	@ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
+bonus : $(OBJ_BONUS) ${HEADER}
+	@ar rc $(NAME) $(OBJ_BONUS)
 	@echo "$(PURPLE)TOUT EST MAKE_AVEC_BONUSE"
 
 %.o:%.c

@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:05:50 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 15:38:14 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:28:23 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **head, t_list *new_node)
 {
-	if (new_node == NULL)
+	if (!head || new_node == NULL)
 		return ;
 	if (*head != NULL)
 	{
@@ -24,4 +24,23 @@ void	ft_lstadd_back(t_list **head, t_list *new_node)
 	{
 		*head = new_node;
 	}
+}
+int main(){
+	char s[] ="said";
+	char s2[] ="hiba";
+	
+	t_list *result;
+	t_list *result2;
+	
+	result = ft_lstnew(s);
+	result2 = ft_lstnew(s2);
+	
+	
+	
+	ft_lstadd_back(&result,result2);
+	printf("%p \n%p \n%p",result,result->next,result->next->next);
+	
+	
+		
+	
 }

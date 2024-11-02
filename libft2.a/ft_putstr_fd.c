@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:22 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 16:14:35 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:33:51 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *str, int fd)
 {
 	int	i;
 
+	if (fd < 0)
+		return ;
 	if (!str)
 	{
 		return ;

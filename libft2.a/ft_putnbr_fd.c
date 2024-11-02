@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:10 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/29 17:32:31 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:32:42 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int nbr, int fd)
 {
 	long	n;
 
+	if (fd < 0)
+		return ;
 	n = nbr;
 	if (n < 0)
 	{

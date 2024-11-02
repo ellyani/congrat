@@ -6,13 +6,13 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:48:08 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 15:15:00 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:20:45 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	size_(const char *str, char c)
+int	ft_count_words(const char *str, char c)
 {
 	int	i;
 	int	j;
@@ -33,18 +33,18 @@ int	size_(const char *str, char c)
 	return (i);
 }
 
-char	*ft_m3yzo(const char *str, size_t n, size_t len)
+char	*ft_m3yzo(const char *str, size_t debut_cpy, size_t len)
 {
 	char	*s;
 	int		i;
 
 	i = 0;
-	s = ft_calloc((len - n + 1), (sizeof(char)));
-	while (n < len)
+	s = ft_calloc((len - debut_cpy + 1), (sizeof(char)));
+	while (debut_cpy < len)
 	{
-		s[i] = str[n];
+		s[i] = str[debut_cpy];
 		i++;
-		n++;
+		debut_cpy++;
 	}
 	s[i] = '\0';
 	return (s);
@@ -52,27 +52,27 @@ char	*ft_m3yzo(const char *str, size_t n, size_t len)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t		m;
+	size_t		i;
 	size_t		j;
-	int			n;
+	int			debut_cpy;
 	char		**src;
 
-	m = -1;
+	i = -1;
 	j = 0;
-	n = -1;
+	debut_cpy = -1;
 	if (!s)
 		return (0);
-	src = ft_calloc((size_(s, c) + 1), sizeof(char *));
+	src = ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
 	if (!src)
 		return (NULL);
-	while (++m <= ft_strlen(s))
+	while (++i <= ft_strlen(s))
 	{
-		if (s[m] != c && n < 0)
-			n = m;
-		else if ((s[m] == c || m == ft_strlen(s)) && n >= 0)
+		if (s[i] != c && debut_cpy < 0)
+			debut_cpy = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && debut_cpy >= 0)
 		{
-			src[j++] = ft_m3yzo(s, n, m);
-			n = -1;
+			src[j++] = ft_m3yzo(s, debut_cpy, i);
+			debut_cpy = -1;
 		}
 	}
 	src[j] = 0;
