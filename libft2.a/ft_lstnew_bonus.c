@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:06:30 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/02 17:34:54 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/03 13:00:29 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,9 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
+// int main(){
+// 	t_list *new;
+// 	char s[] = "said";
+// 	new = ft_lstnew(s);
+// 	printf("%p",new->content);
+// }

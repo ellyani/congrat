@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:06:21 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 15:40:04 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:47:10 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,31 @@ t_list	*ft_lstmap(t_list *head, void *(*f)(void *), void (*del)(void *))
 		head = head->next;
 	}
 	return (new);
+}
+void	fr_aff(void *c){
+	printf("%s\n",c);
+}
+void del(void *content){
+	 	free(content);
+ }
+
+int main(){
+	#include <string.h>
+	// char *s1;
+	// char *s2;
+	// char *s3;
+	char *re;
+	t_list *n1 =ft_lstnew(strdup("SAID"));
+	t_list *n2 =ft_lstnew(strdup("HIBA"));
+	t_list *n3 =ft_lstnew(strdup("CHAHD"));
+	t_list *result =malloc(sizeof(char *));
+	
+	
+	
+	n1->next =n2;
+	n2->next =n3;
+	ft_lstmap(n1,fr_aff,del);
+	
+	
+	
 }
