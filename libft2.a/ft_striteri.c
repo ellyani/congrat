@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:49 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 15:17:15 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:30:11 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+// void f(unsigned int  i, char *d){
+// 	if(*d >='a' && *d <='z')
+// 	{
+// 		*d-=32;
+// 	}
+// }
+// int main(){
+// 	char s[] ="said";
+// 	ft_striteri(s, f);
+// 	printf("%s\n",s);
+// }

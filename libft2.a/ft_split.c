@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:48:08 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/01 18:20:45 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:43:28 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_count_words(const char *str, char c)
 	return (i);
 }
 
-char	*ft_m3yzo(const char *str, size_t debut_cpy, size_t len)
+char	*ft_split1(const char *str, size_t debut_cpy, size_t len)
 {
 	char	*s;
 	int		i;
@@ -71,7 +71,7 @@ char	**ft_split(char const *s, char c)
 			debut_cpy = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && debut_cpy >= 0)
 		{
-			src[j++] = ft_m3yzo(s, debut_cpy, i);
+			src[j++] = ft_split1(s, debut_cpy, i);
 			debut_cpy = -1;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:06:54 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/02 17:06:50 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:26:19 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (led);
 }
+
+
 // int main(){
 // 	char buffer[4];
 // 	int nb = 1337;

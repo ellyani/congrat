@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:57 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 16:21:30 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:14:25 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	return (i + ft_strlen(src));
 }
+// int main(){
+// 	char s1[50]="saSdid";
+// 	char s2[]="ellyaSDDhni";
+// 	size_t size = 50,r;
+// 	r = ft_strlcat(s1,s2,size);
+	
+// 	printf("%zu\n",r);
+// }

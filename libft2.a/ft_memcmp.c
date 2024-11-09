@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:06:41 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/29 17:18:55 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:44:22 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return ((int)(*str1 - *str2));
 }
+

@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:08:34 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/31 17:27:33 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:50:28 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	j = 0;
 	if (!haystack && needle && len == 0)
 		return (0);
 	while (haystack[i] != '\0' && i <= len)

@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:08:52 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/30 15:32:15 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:28:00 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	ft_strlcpy(new, &s[start], len + 1);
 	return (new);
+}
+int main(){
+	char s[]="said";
+	
+	printf("%s\n",ft_substr(s,1,4));
 }
