@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:10 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/02 17:32:42 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:09:35 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,7 @@ void	ft_putnbr_fd(int nbr, int fd)
 	}
 	else
 		ft_putchar_fd((n + 48), fd);
+}
+int main(){
+	ft_putnbr_fd(2147483647 ,1);
 }

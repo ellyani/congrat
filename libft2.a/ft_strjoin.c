@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:53 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/08 17:40:38 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:32:52 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
+	// !s1 && !s2	
+	// !s1 && s2
+	// s1 && !s2
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
 	s3 = (char *)malloc(l1 + l2 + 1);

@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:05:02 by sellyani          #+#    #+#             */
-/*   Updated: 2024/10/31 17:30:57 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:50:06 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,15 @@ int	ft_atoi(const char *str)
 	while (str[i] && ft_isdigit(str[i]))
 	{
 		result = (result * 10) + (str[i] - 48);
-		if ((size_t)result > LLONG_MAX && sign == -1)
-			return (0);
-		if ((size_t)result > LLONG_MAX)
+		if ((size_t)result > (unsigned long int) && sign == -1)
 			return (-1);
+		if ((size_t)result > (unsigned long int)+ 1 && sign == 1)
+			return (1);
 		i++;
 	}
 	return (result * sign);
+}
+int main(){
+	printf("%d\n",ft_atoi("9223372036854775807"));
+	printf("%d\n",atoi("-922337203685477580167"));
 }

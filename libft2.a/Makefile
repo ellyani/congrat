@@ -2,7 +2,7 @@ NAME = libft.a
 
 CFLAGS = -Wall -Wextra -Werror
 
-RM = rm -rf
+RM = rm -f
 
 HEADER = libft.h
 

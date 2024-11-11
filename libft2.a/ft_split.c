@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:48:08 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/08 16:43:28 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:31:21 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ char	*ft_split1(const char *str, size_t debut_cpy, size_t len)
 
 	i = 0;
 	s = ft_calloc((len - debut_cpy + 1), (sizeof(char)));
+	if (!s)
+		//free(s);
+		//retrun ;
 	while (debut_cpy < len)
 	{
 		s[i] = str[debut_cpy];
@@ -64,7 +67,8 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	src = ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
 	if (!src)
-		return (NULL);
+		//ft_free(src);
+		//return (NULL);
 	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && debut_cpy < 0)
@@ -77,4 +81,21 @@ char	**ft_split(char const *s, char c)
 	}
 	src[j] = 0;
 	return (src);
+}
+
+void ft()
+{
+	system("LEAKS a.out");
+}
+
+int main(){
+	char **result = ft_split("sdfghjkljhgfsdfghjhgf",' ');
+	int i = 0;
+	atexit(ft);
+	while(result[i]){
+		printf("%s\n",result[i]);
+		free(result[i++]);
+	}
+	free(result);
+	return (0);
 }

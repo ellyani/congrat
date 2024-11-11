@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:08:52 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/08 19:28:00 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:54:59 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	if (start > ft_strlen(s))
 	{
-		return (ft_strdup(""));
-	}
+	
+	}	return (ft_strdup(""));
 	slen = ft_strlen(&s[start]);
 	if (len > slen)
 	{
@@ -36,6 +36,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 int main(){
 	char s[]="said";
+	char *result;
+	result = ft_substr(s,2,4);
 	
-	printf("%s\n",ft_substr(s,1,4));
+	printf("%s\n",result);
 }

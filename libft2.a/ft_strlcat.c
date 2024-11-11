@@ -6,7 +6,7 @@
 /*   By: sellyani <sellyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:07:57 by sellyani          #+#    #+#             */
-/*   Updated: 2024/11/08 18:14:25 by sellyani         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:34:24 by sellyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	return (i + ft_strlen(src));
 }
-// int main(){
-// 	char s1[50]="saSdid";
-// 	char s2[]="ellyaSDDhni";
-// 	size_t size = 50,r;
-// 	r = ft_strlcat(s1,s2,size);
-	
-// 	printf("%zu\n",r);
-// }
+
+#include <string.h>
+
+int main()
+{
+    char dest[20] = "Hello, ";
+    const char *src = "World!";
+
+    //size_t result = ft_strlcat(dest, src,1);
+	size_t result = strlcat(dest, src,1);
+    //printf("Resulting string: %s\n", dest);
+    printf("Total length: %zu\n", result);
+
+    return 0;
+}
